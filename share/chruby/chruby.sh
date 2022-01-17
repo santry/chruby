@@ -54,7 +54,7 @@ EOF
 	if (( UID != 0 )); then
 		export GEM_HOME="$HOME/.gem/$RUBY_ENGINE/$RUBY_VERSION"
 		export GEM_PATH="$GEM_HOME${GEM_ROOT:+:$GEM_ROOT}${GEM_PATH:+:$GEM_PATH}"
-		export PATH="$GEM_HOME/bin:$PATH"
+		export PATH=".git/safe/../../bin:$GEM_HOME/bin:$PATH"
 	fi
 
 	hash -r
